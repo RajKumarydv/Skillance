@@ -1,5 +1,5 @@
 export { default as Navbar } from "./navbar/Navbar";
-export { default as Featured } from "./Featured/Featured";
+export { default as Featured } from "./featured/Featured";
 export { default as TrustedBy } from "./TrustedBy/TrustedBy";
 export { default as CategoryCard } from "./CategoryCard/CategoryCard";
 export { default as Slide } from "./Slide/Slide";
