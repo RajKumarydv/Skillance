@@ -1,34 +1,54 @@
 .trustedBy {
-    background-color: #fafafa;
+    background-color: var(--win-silver-light);
+    border-top: 1px solid var(--win-button-highlight);
+    border-bottom: 1px solid var(--win-button-shadow);
+    padding: 8px 0;
     display: flex;
     justify-content: center;
 
     .container {
         width: 100%;
+        max-width: 900px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 50px;
-        color: #b5b6ba;
-        font-weight: 600;
+        gap: 24px;
+        padding: 6px 16px;
+        background-color: var(--win-silver);
+        border-top: 2px solid var(--win-button-highlight);
+        border-left: 2px solid var(--win-button-highlight);
+        border-right: 2px solid var(--win-button-shadow);
+        border-bottom: 2px solid var(--win-button-shadow);
 
         span {
+            color: var(--win-black);
+            font-weight: bold;
+            font-size: 13px;
+            white-space: nowrap;
+
             @media screen and (max-width: 600px) {
                 display: none;
             }
         }
 
         img {
-            height: 70px;
+            height: 28px;
             object-fit: contain;
+            filter: grayscale(80%) contrast(0.8);
+            opacity: 0.85;
+
+            &:hover {
+                filter: grayscale(0%);
+                opacity: 1;
+            }
 
             @media screen and (max-width: 600px) {
-                height: 35px;
+                height: 20px;
             }
         }
 
         @media screen and (max-width: 900px) {
-            gap: 30px;
+            gap: 14px;
         }
     }
 }

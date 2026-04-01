@@ -3,12 +3,146 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Tahoma", "Arial", sans-serif;
+    font-size: 13px;
 }
 
 :root {
-    --green-color: #1dbf73;
-    --white-color: #ffffff;
-    --dark-green: #013914;
-    --gray-color: #74767e;
+    /* Windows 2000 color palette */
+    --win-silver: #d4d0c8;
+    --win-silver-dark: #808080;
+    --win-silver-light: #f0ede7;
+    --win-blue-title: #0a246a;
+    --win-blue-title-end: #a6caf0;
+    --win-teal: #008080;
+    --win-white: #ffffff;
+    --win-black: #000000;
+    --win-button-face: #d4d0c8;
+    --win-button-shadow: #808080;
+    --win-button-highlight: #ffffff;
+    --win-button-dk-shadow: #404040;
+    --win-link: #0000ff;
+    --win-link-visited: #800080;
+    --win-text: #000000;
+    --win-bg: #008080;
+
+    /* semantic tokens */
+    --background: var(--win-silver);
+    --foreground: var(--win-black);
+}
+
+body {
+    background-color: var(--win-bg);
+    overflow-x: hidden;
+    cursor: default;
+}
+
+a {
+    color: var(--win-link);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--win-link-visited);
+}
+
+/* Windows 2000 classic raised button */
+.win-btn {
+    background-color: var(--win-button-face);
+    color: var(--win-black);
+    border-top: 2px solid var(--win-button-highlight);
+    border-left: 2px solid var(--win-button-highlight);
+    border-right: 2px solid var(--win-button-shadow);
+    border-bottom: 2px solid var(--win-button-shadow);
+    padding: 3px 10px;
+    cursor: pointer;
+    font-family: "Tahoma", "Arial", sans-serif;
+    font-size: 13px;
+    min-width: 75px;
+}
+
+.win-btn:active {
+    border-top: 2px solid var(--win-button-shadow);
+    border-left: 2px solid var(--win-button-shadow);
+    border-right: 2px solid var(--win-button-highlight);
+    border-bottom: 2px solid var(--win-button-highlight);
+    padding: 4px 9px 2px 11px;
+}
+
+.win-btn:hover {
+    background-color: #e0ddd6;
+}
+
+/* Classic sunken input */
+.win-input {
+    border-top: 2px solid var(--win-button-shadow);
+    border-left: 2px solid var(--win-button-shadow);
+    border-right: 2px solid var(--win-button-highlight);
+    border-bottom: 2px solid var(--win-button-highlight);
+    background-color: var(--win-white);
+    color: var(--win-black);
+    padding: 2px 4px;
+    font-family: "Tahoma", "Arial", sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+/* Title bar gradient */
+.win-titlebar {
+    background: linear-gradient(90deg, var(--win-blue-title) 0%, var(--win-blue-title-end) 100%);
+    color: var(--win-white);
+    font-weight: bold;
+    font-size: 13px;
+    padding: 3px 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+}
+
+/* Window panel */
+.win-panel {
+    background-color: var(--win-silver);
+    border-top: 2px solid var(--win-button-highlight);
+    border-left: 2px solid var(--win-button-highlight);
+    border-right: 2px solid var(--win-button-dk-shadow);
+    border-bottom: 2px solid var(--win-button-dk-shadow);
+    padding: 4px;
+}
+
+/* Sunken panel */
+.win-sunken {
+    border-top: 2px solid var(--win-button-shadow);
+    border-left: 2px solid var(--win-button-shadow);
+    border-right: 2px solid var(--win-button-highlight);
+    border-bottom: 2px solid var(--win-button-highlight);
+    background-color: var(--win-white);
+    padding: 8px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+::-webkit-scrollbar-track {
+    background: var(--win-silver);
+    border-top: 1px solid var(--win-button-shadow);
+    border-left: 1px solid var(--win-button-shadow);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--win-silver);
+    border-top: 2px solid var(--win-button-highlight);
+    border-left: 2px solid var(--win-button-highlight);
+    border-right: 2px solid var(--win-button-dk-shadow);
+    border-bottom: 2px solid var(--win-button-dk-shadow);
+}
+::-webkit-scrollbar-button {
+    background: var(--win-silver);
+    border-top: 2px solid var(--win-button-highlight);
+    border-left: 2px solid var(--win-button-highlight);
+    border-right: 2px solid var(--win-button-dk-shadow);
+    border-bottom: 2px solid var(--win-button-dk-shadow);
+    width: 16px;
+    height: 16px;
 }

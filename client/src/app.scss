@@ -7,4 +7,10 @@
 
   body {
     overflow-x: hidden;
+    background-color: var(--win-bg);
+  }
+
+  .App {
+    background-color: var(--win-bg);
+    min-height: 100vh;
   }

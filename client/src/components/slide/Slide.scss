@@ -1,5 +1,23 @@
 .slide-Container {
-    padding: 100px 0;
+    padding: 16px 0;
     width: 95%;
     margin: auto;
+    background-color: var(--win-silver);
+
+    /* Win2000 section header */
+    &::before {
+        content: '📁 Browse Categories';
+        display: block;
+        background: linear-gradient(90deg, var(--win-blue-title) 0%, var(--win-blue-title-end) 100%);
+        color: #fff;
+        font-family: "Tahoma", "Arial", sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 3px 6px;
+        margin-bottom: 8px;
+        border-top: 2px solid var(--win-button-highlight);
+        border-left: 2px solid var(--win-button-highlight);
+        border-right: 2px solid var(--win-button-dk-shadow);
+        border-bottom: 2px solid var(--win-button-dk-shadow);
+    }
 }

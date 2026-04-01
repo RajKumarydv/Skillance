@@ -1,99 +1,131 @@
 .home {
+    background-color: var(--win-silver);
+    min-height: 100vh;
 
     .features {
-        background-color: #f1fdf7;
+        background-color: var(--win-silver-light);
         display: flex;
         justify-content: center;
-        padding: 100px 0;
-        
-        &.dark {
-            background-color: #0D084D;
-    
-            h1, h2, p, h6 {
-                color: #fff !important;
-                font-weight: 400 !important;
-            }
-    
-            h1, h2 {
-                font-weight: 500 !important;
-            }
+        padding: 16px;
+        border-top: 1px solid var(--win-button-shadow);
+        border-bottom: 1px solid var(--win-button-shadow);
 
-            h1 > span {
-                font-family: 'Noto Serif Display', serif;
-                font-weight: 600;
-            }
-
-            .item > img {
-                width: 100% !important;
-            }
-
-            button {
-                background-color: var(--green-color);
-                color: #fff;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-                margin-top: 20px;
-                border: none;
-                width: max-content;
-            }
+        /* Win2000 outer panel */
+        &::before {
+            display: none;
         }
 
         .container {
+            width: 100%;
+            max-width: 900px;
             display: flex;
-            width: 90%;
-            align-items: center;
-            gap: 50px;
+            gap: 16px;
+            align-items: flex-start;
+            background-color: var(--win-silver);
+            border-top: 2px solid var(--win-button-highlight);
+            border-left: 2px solid var(--win-button-highlight);
+            border-right: 2px solid var(--win-button-dk-shadow);
+            border-bottom: 2px solid var(--win-button-dk-shadow);
+            padding: 0;
+            overflow: hidden;
 
             @media screen and (max-width: 900px) {
                 flex-direction: column;
-                gap: 20px;
+                gap: 0;
             }
         }
 
         .item {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 8px;
+            padding: 12px 14px;
+            flex: 1;
 
             h1 {
-                font-weight: 700;
-                margin-bottom: 10px;
-                font-size: 38px;
-                color: #404145;
+                font-weight: bold;
+                font-size: 14px;
+                color: var(--win-black);
+                font-family: "Tahoma", "Arial", sans-serif;
+                border-bottom: 1px solid var(--win-button-shadow);
+                padding-bottom: 6px;
+                margin-bottom: 4px;
             }
 
             p {
-                font-size: 18px;
-                font-weight: 500;
-                color: #62646A;
-                line-height: 26px;
+                font-size: 12px;
+                color: #404040;
+                line-height: 1.5;
             }
 
             .title {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 6px;
+                margin-top: 4px;
 
                 img {
-                    width: 24px;
-                    height: 24px;
+                    width: 16px;
+                    height: 16px;
+                    image-rendering: pixelated;
                 }
                 
                 h6 {
-                    color: #404145;
-                    font-weight: 700;
-                    font-size: 18px;
+                    color: var(--win-black);
+                    font-weight: bold;
+                    font-size: 13px;
+                    font-family: "Tahoma", "Arial", sans-serif;
                 }
             }
 
             video {
-                width: 720px;
+                width: 100%;
+                border-top: 2px solid var(--win-button-shadow);
+                border-left: 2px solid var(--win-button-shadow);
+                border-right: 2px solid var(--win-button-highlight);
+                border-bottom: 2px solid var(--win-button-highlight);
+            }
+
+            &:first-child {
+                border-right: 2px solid var(--win-button-shadow);
 
                 @media screen and (max-width: 900px) {
-                    width: 100%;
+                    border-right: none;
+                    border-bottom: 2px solid var(--win-button-shadow);
                 }
+            }
+
+            /* Section title bar */
+            &:first-child::before {
+                content: '📋 Skilance Features';
+                display: block;
+                background: linear-gradient(90deg, var(--win-blue-title) 0%, var(--win-blue-title-end) 100%);
+                color: var(--win-white);
+                font-family: "Tahoma", "Arial", sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 3px 6px;
+                margin: -12px -14px 10px -14px;
+            }
+
+            &:last-child::before {
+                content: '🎬 Video Demo';
+                display: block;
+                background: linear-gradient(90deg, var(--win-blue-title) 0%, var(--win-blue-title-end) 100%);
+                color: var(--win-white);
+                font-family: "Tahoma", "Arial", sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 3px 6px;
+                margin: -12px -14px 10px -14px;
+            }
+        }
+
+        &.dark {
+            background-color: var(--win-silver);
+
+            h1, h2, p, h6 {
+                color: var(--win-black) !important;
             }
         }
     }
