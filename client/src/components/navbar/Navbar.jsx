@@ -107,6 +107,12 @@ const Navbar = () => {
     <nav className={showMenu || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
+          <div className="win-logo-icon">
+            <div className="q1"></div>
+            <div className="q2"></div>
+            <div className="q3"></div>
+            <div className="q4"></div>
+          </div>
           <Link to="/" className="link">
             <span className="text">Skilance</span>
           </Link>

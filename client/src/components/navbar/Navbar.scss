@@ -3,128 +3,208 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #1A1B1D;
-    color: #fff;
-    transition: 0.5s all ease;
+    background-color: var(--win-silver);
+    color: var(--win-black);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    border-bottom: 2px solid var(--win-button-shadow);
+    border-top: 2px solid var(--win-button-highlight);
 
     &.active {
-        background-color: #fff;
-        color: #000;
+        background-color: var(--win-silver);
+        color: var(--win-black);
     }
 
     .container {
-        width: 95%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 20px 30px;
+        align-items: center;
+        padding: 4px 8px;
+        border-bottom: 1px solid var(--win-button-shadow);
 
         .logo {
-            font-size: 34px;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            .text {
+                font-size: 18px;
+                font-weight: bold;
+                color: var(--win-blue-title);
+                font-family: "Tahoma", "Arial", sans-serif;
+                text-shadow: 1px 1px 0 #fff;
+                letter-spacing: 1px;
+            }
 
             .dot {
-                color: var(--green-color);
+                color: var(--win-teal);
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .win-logo-icon {
+                display: inline-flex;
+                gap: 1px;
+                margin-right: 4px;
+
+                .q1 { width: 10px; height: 10px; background: #e8111a; }
+                .q2 { width: 10px; height: 10px; background: #00a33c; }
+                .q3 { width: 10px; height: 10px; background: #0278d7; }
+                .q4 { width: 10px; height: 10px; background: #ffba02; }
+                display: inline-grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
             }
         }
 
         .links {
             display: flex;
             align-items: center;
-            gap: 24px;
-            font-weight: 500;
+            gap: 6px;
+            font-size: 13px;
 
             .menu-links {
                 display: flex;
                 align-items: center;
-                gap: 24px;
-                font-weight: 500;
-
-                @media screen and (max-width: 800px) {
-                    display: none;
-                }
+                gap: 6px;
             }
 
             .user {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 6px;
                 cursor: pointer;
                 position: relative;
 
                 img {
-                    width: 32px;
-                    height: 32px;
+                    width: 24px;
+                    height: 24px;
                     object-fit: cover;
-                    border-radius: 50%;
+                    border: 1px solid var(--win-button-shadow);
+                }
+
+                span {
+                    font-size: 13px;
+                    color: var(--win-black);
                 }
 
                 .options {
-                    width: 200px;
                     position: absolute;
-                    top: 50px;
+                    top: 36px;
                     right: 0;
-                    padding: 20px;
-                    z-index: 2;
-
-                    color: var(--gray-color);
-                    font-weight: 400;
-                    background-color: #fff;
-                    border: 1px solid lightgray;
-                    border-radius: 10px;
-                    transition: 0.5s all ease;
-
+                    background-color: var(--win-silver);
+                    border-top: 2px solid var(--win-button-highlight);
+                    border-left: 2px solid var(--win-button-highlight);
+                    border-right: 2px solid var(--win-button-dk-shadow);
+                    border-bottom: 2px solid var(--win-button-dk-shadow);
+                    padding: 4px 0;
+                    min-width: 160px;
+                    z-index: 999;
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
+
+                    a {
+                        padding: 4px 16px;
+                        font-size: 13px;
+                        color: var(--win-black);
+                        text-decoration: none;
+                        font-family: "Tahoma", "Arial", sans-serif;
+
+                        &:hover {
+                            background-color: var(--win-blue-title);
+                            color: var(--win-white);
+                        }
+                    }
                 }
             }
 
             button {
-                color: var(--white-color);
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 14px;
-                border: 1px solid #fff;
+                background-color: var(--win-button-face);
+                color: var(--win-black);
+                border-top: 2px solid var(--win-button-highlight);
+                border-left: 2px solid var(--win-button-highlight);
+                border-right: 2px solid var(--win-button-shadow);
+                border-bottom: 2px solid var(--win-button-shadow);
+                padding: 3px 10px;
                 cursor: pointer;
-                background-color: transparent;
+                font-family: "Tahoma", "Arial", sans-serif;
+                font-size: 13px;
 
                 &:hover {
-                    background-color: var(--green-color);
-                    border-color: var(--gray-color);
+                    background-color: #e0ddd6;
+                }
+
+                &:active {
+                    border-top: 2px solid var(--win-button-shadow);
+                    border-left: 2px solid var(--win-button-shadow);
+                    border-right: 2px solid var(--win-button-highlight);
+                    border-bottom: 2px solid var(--win-button-highlight);
                 }
             }
 
             .join-active {
-                color: #1DBF73;
-                font-weight: 600;
-                font-size: 14px;
-                border: 1px solid #1DBF73;
+                background-color: var(--win-button-face);
+                color: var(--win-black);
+                border-top: 2px solid var(--win-button-highlight);
+                border-left: 2px solid var(--win-button-highlight);
+                border-right: 2px solid var(--win-button-shadow);
+                border-bottom: 2px solid var(--win-button-shadow);
+                font-weight: bold;
 
                 &:hover {
-                    background-color: #1DBF73;
-                    border-color: #1DBF73;
-                    color: #fff;
+                    background-color: #e0ddd6;
                 }
             }
         }
     }
 
     hr {
-        width: 100%;
-        border: .5px solid #e4e3e3;
+        display: none;
     }
 
+    /* Menu bar */
     .menu {
-        width: 80%;
-        color: var(--gray-color);
+        width: 100%;
+        background-color: var(--win-silver);
+        border-bottom: 1px solid var(--win-button-shadow);
 
         .menu-item {
-            padding: 10px 0;
+            padding: 2px 12px;
             cursor: pointer;
             text-align: center;
+            font-size: 13px;
+
+            a {
+                color: var(--win-black);
+                text-decoration: none;
+                font-family: "Tahoma", "Arial", sans-serif;
+                font-size: 13px;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: var(--win-blue-title);
+                }
+            }
         }
+
+        .slick-prev, .slick-next {
+            color: var(--win-black);
+        }
+
+        &:before {
+            content: '';
+        }
+    }
+
+    /* Override slick slider to look like a menu bar */
+    .slick-slider {
+        padding: 2px 20px;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
     }
 }
