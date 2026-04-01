@@ -10,5 +10,5 @@ export { default as GigCard } from "./gigCard/GigCard";
 export { default as Reviews } from "./reviews/Reviews";
 export { default as Review } from "./review/Review";
 export { default as CheckoutForm } from "./checkoutForm/CheckoutForm";
-export { default as PrivateRoute } from "./privateRoute/PrivateRoute";
+export { default as PrivateRoute } from "./PrivateRoute/PrivateRoute";
 export { default as Loader } from './Loader/Loader';
