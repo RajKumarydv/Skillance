@@ -1,4 +1,4 @@
-export { default as Home } from './Home/Home';
+export { default as Home } from './home/Home';
 export { default as Footer } from './Footer/Footer';
 export { default as Gig } from './Gig/Gig';
 export { default as Gigs } from './Gigs/Gigs';
