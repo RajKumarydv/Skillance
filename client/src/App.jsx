@@ -19,7 +19,6 @@ import {
   Success,
   NotFound,
 } from "./pages";
-import "./App.scss";
 
 const paths = [
   { path: "/", element: <Home /> },
